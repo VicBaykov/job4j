@@ -25,7 +25,8 @@ public class CalculateTest {
 		calc.add(1d, 1d);
 		double result = calc.getResult();
 		double expected = 2d;
-		assertThat(result, is(expected));/*это статический метод из класса org.junit.Assert.assertThat;
+		assertThat(result, is(expected));
+		/*это статический метод из класса org.junit.Assert.assertThat;
 		*Этот метод принимает две переменных. result и Matcher.
 
 		*Matcher - в данном примере - это методы статический метод из класса import static org.hamcrest.core.Is.is;
