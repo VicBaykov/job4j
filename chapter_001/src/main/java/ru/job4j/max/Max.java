@@ -7,11 +7,12 @@ public class Max {
     private int max;
     public int max(int first, int second) {
 
-        if (first > second) {
+        max = (first > second) ? first : second;
+        /*if (first > second) {
             max = first;
         } else if (first < second) {
             max = second;
-        }
+        }*/
         return max;
     }
 }
