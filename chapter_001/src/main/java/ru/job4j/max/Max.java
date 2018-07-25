@@ -15,4 +15,10 @@ public class Max {
         }*/
         return max;
     }
+
+    public int max(int a, int b, int c) {
+        int temp = this.max(a, b);
+        max = max(temp, c);
+        return max;
+    }
 }
