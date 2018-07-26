@@ -10,7 +10,7 @@ public class Max {
     }
 
     public int max(int a, int b, int c) {
-        max = max(max(a,b), c);
+        max = max(max(a, b), c);
         return max;
     }
 }
