@@ -60,7 +60,6 @@ public class Triangle {
      */
     private boolean exist(double ab, double ac, double bc) {
         return ((ab + ac) > bc) && ((bc + ac) > ab) && ((ab + bc) > ac);
-
     }
 
 }
