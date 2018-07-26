@@ -7,18 +7,18 @@ public class Max {
     private int max;
     public int max(int first, int second) {
 
-        max = (first > second) ? first : second;
+
         /*if (first > second) {
             max = first;
         } else if (first < second) {
             max = second;
         }*/
-        return max;
+        return (first > second) ? first : second;
     }
 
     public int max(int a, int b, int c) {
-        int temp = this.max(a, b);
-        max = max(temp, c);
+        //int temp = this.max(a, b);
+        max = max(max(a,b), c);
         return max;
     }
 }
