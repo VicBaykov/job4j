@@ -20,4 +20,11 @@ public class ArrayCharTest {
         boolean result = word.startWith("Hi");
         assertThat(result, is(false));
     }
+
+    @Test
+    public void whenFirstNotStartWithPrefixThenFalse() {
+        ArrayChar word = new ArrayChar("Hello");
+        boolean result = word.startWith("Le");
+        assertThat(result, is(false));
+    }
 }
