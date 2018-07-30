@@ -16,7 +16,7 @@ public class FindLoopTest {
         int expect = 0;
         assertThat(result, is(expect));
     }
-
+    @Test
     public void whenArrayHasLengh5ThenNone() {
         int value = 6;
         int result = find.indexOf(input, value);
