@@ -14,7 +14,6 @@ public class BubbleSort {
                     array[j + 1] = buff;
                 }
             }
-
         }
         return array;
     }
