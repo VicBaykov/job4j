@@ -23,7 +23,6 @@ public class ArrayChar {
                 result = false;
                 break;
             }
-            result = true;
         }
         return result;
     }
