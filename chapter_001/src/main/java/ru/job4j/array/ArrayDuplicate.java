@@ -13,6 +13,7 @@ public class ArrayDuplicate {
                 if (array[i].equals(array[j])) {
                     array[j] = array[index - 1];
                     index--;
+                    j--;
                 }
 
             }
