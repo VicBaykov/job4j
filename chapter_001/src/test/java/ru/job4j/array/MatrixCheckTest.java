@@ -21,15 +21,15 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void when3on3FalseTrue() {
+    public void when3on3FalseFalse() {
         MatrixCheck matrix = new MatrixCheck();
-        boolean[][] start = {
+        boolean[][] input = {
                 {false, true, true},
                 {false, false, true},
                 {true, false, false}
         };
-        boolean res = matrix.mono(start);
-        boolean expect = true;
+        boolean res = matrix.mono(input);
+        boolean expect = false;
         assertThat(res, is(expect));
     }
 
@@ -45,4 +45,28 @@ public class MatrixCheckTest {
         boolean expect = false;
         assertThat(res, is(expect));
     }
+    @Test
+    public void when2on2TrueTrue() {
+        MatrixCheck matrix = new MatrixCheck();
+        boolean[][] start = {
+                {true, true},
+                {false, true}
+        };
+        boolean res = matrix.mono(start);
+        boolean expect = false;
+        assertThat(res, is(expect));
+    }
+
+    @Test
+    public void when2on2FalseTrue() {
+        MatrixCheck matrix = new MatrixCheck();
+        boolean[][] start = {
+                {true, false},
+                {false, true}
+        };
+        boolean res = matrix.mono(start);
+        boolean expect = true;
+        assertThat(res, is(expect));
+    }
+
 }
