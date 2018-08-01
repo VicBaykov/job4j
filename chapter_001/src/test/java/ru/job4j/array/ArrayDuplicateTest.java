@@ -16,4 +16,13 @@ public class ArrayDuplicateTest {
         String[] res = arrayDuplicate.remove(input);
         assertThat(res, is(expect));
     }
+
+    @Test
+    public void whenRemove() {
+        ArrayDuplicate arrayDuplicate = new ArrayDuplicate();
+        String[] input = {"Привет", "Привет", "Привет", "Привет"};
+        String[] expect = {"Привет"};
+        String[] res = arrayDuplicate.remove(input);
+        assertThat(res, is(expect));
+    }
 }
