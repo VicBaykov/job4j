@@ -12,7 +12,7 @@ public class ArrayDuplicateTest {
     public void whenRemoveDuplicatesThenArrayWithoutDuplicate() {
         ArrayDuplicate arrayDuplicate = new ArrayDuplicate();
         String[] input = {"Привет", "Мир", "Привет", "Супер", "Мир"};
-        String[] expect= {"Привет", "Мир", "Супер"};
+        String[] expect = {"Привет", "Мир", "Супер"};
         String[] res = arrayDuplicate.remove(input);
         assertThat(res, is(expect));
     }
