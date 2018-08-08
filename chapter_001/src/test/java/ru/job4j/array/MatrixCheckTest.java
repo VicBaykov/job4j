@@ -20,16 +20,18 @@ public class MatrixCheckTest {
         assertThat(res, is(expect));
     }
 
+
+
     @Test
     public void when3on3FalseFalse() {
         MatrixCheck matrix = new MatrixCheck();
         boolean[][] input = {
-                {false, true, true},
+                {true, true, false},
                 {false, false, true},
-                {true, false, false}
+                {false, false, false}
         };
         boolean res = matrix.mono(input);
-        boolean expect = false;
+        boolean expect = true;
         assertThat(res, is(expect));
     }
 
@@ -53,7 +55,7 @@ public class MatrixCheckTest {
                 {false, true}
         };
         boolean res = matrix.mono(start);
-        boolean expect = false;
+        boolean expect = true;
         assertThat(res, is(expect));
     }
 
