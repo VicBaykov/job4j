@@ -2,15 +2,24 @@ package ru.job4j.loop;
 
 
 import java.util.function.BiPredicate;
-/**
- * Created by vicba on 28.07.2018.
+/*
+ *Paint.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class Paint {
-
-    private String loopBy(int height, int weight, BiPredicate<Integer, Integer> predict) {
+    /**
+     * Строит пирамиду в псевдографике
+     * @param height Высота пирамиды
+     * @param  width Ширина пирамиды
+     * @return Отображает пирамиду.
+     */
+    private String loopBy(int height, int width, BiPredicate<Integer, Integer> predict) {
         StringBuilder screen = new StringBuilder();
         for (int row = 0; row != height; row++) {
-            for (int column = 0; column != weight; column++) {
+            for (int column = 0; column != width; column++) {
                 if (predict.test(row, column)) {
                     screen.append("^");
                 } else {
@@ -22,6 +31,11 @@ public class Paint {
         return screen.toString();
     }
 
+    /**
+     * Строит пирамиду в псевдографике
+     * @param height Высота пирамиды
+     * @return Строит правую часть пирамиды.
+     */
     public String rightTrl(int height) {
         return this.loopBy(
                 height,
@@ -30,6 +44,11 @@ public class Paint {
         );
     }
 
+    /**
+     * Строит пирамиду в псевдографике
+     * @param height Высота пирамиды
+     * @return Строит левую часть пирамиды.
+     */
     public String leftTrl(int height) {
         return loopBy(
                 height,
@@ -38,6 +57,11 @@ public class Paint {
         );
     }
 
+    /**
+     * Строит пирамиду в псевдографике
+     * @param height Высота пирамиды
+     * @return Строит пирамиду целиком.
+     */
     public String pyramid(int height) {
         return loopBy(
                 height,

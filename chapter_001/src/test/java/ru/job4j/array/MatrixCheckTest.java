@@ -31,7 +31,7 @@ public class MatrixCheckTest {
                 {false, false, false}
         };
         boolean res = matrix.mono(input);
-        boolean expect = true;
+        boolean expect = false;
         assertThat(res, is(expect));
     }
 
@@ -55,7 +55,7 @@ public class MatrixCheckTest {
                 {false, true}
         };
         boolean res = matrix.mono(start);
-        boolean expect = true;
+        boolean expect = false;
         assertThat(res, is(expect));
     }
 

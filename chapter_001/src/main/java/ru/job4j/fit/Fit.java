@@ -1,7 +1,11 @@
 package ru.job4j.fit;
 
-/**
- * Программа расчета идеального веса.
+/*
+ *Fit.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class Fit {
     /**

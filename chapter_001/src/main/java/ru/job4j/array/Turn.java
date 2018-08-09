@@ -1,22 +1,36 @@
 package ru.job4j.array;
 
-import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
-/**
- * Created by vicba on 30.07.2018.
+/*
+ *Turn.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class Turn {
 
-    public int[] turnBy(int[] start, Predicate<Integer> pred) {
+    /**
+     * Сортирует элементы массива в обратном порядке. Через лямбда выражения.
+     * @param array Входящий массив
+     * @return Перевернутый массив
+     */
+    public int[] turnBy(int[] array, Predicate<Integer> pred) {
         for (int i = 0;  pred.test(i); i++) {
             int tmp;
-            tmp = start[start.length - i - 1];
-            start[start.length - i - 1] = start[i];
-            start[i] = tmp;
+            tmp = array[array.length - i - 1];
+            array[array.length - i - 1] = array[i];
+            array[i] = tmp;
         }
-        return start;
+        return array;
     }
+
+    /**
+     * Сортирует элементы массива в обратном порядке. Для нечетного количества элементов. Через лямбда-выражения
+     * @param array Входящий массив
+     * @return Перевернутый массив
+     */
     public int[] turnOdd(int[] array) {
         return turnBy(
                 array,
@@ -24,12 +38,23 @@ public class Turn {
         );
     }
 
+    /**
+     * Сортирует элементы массива в обратном порядке. Для четного количества элементов. Через лямбда-выражения
+     * @param array Входящий массив
+     * @return Перевернутый массив
+     */
     public int[] turnEven(int[] array) {
         return turnBy(
                 array,
                 (i) -> i < array.length / 2
         );
     }
+
+    /**
+     * Сортирует элементы массива в обратном порядке.
+     * @param array Входящий массив
+     * @return Перевернутый массив
+     */
     public int[] turn(int[] array) {
         for (int i = 0; (i <= array.length / 2 - 1) | (i < array.length / 2); i++) {
             int tmp;

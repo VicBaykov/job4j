@@ -1,10 +1,19 @@
 package ru.job4j.loop;
 
-/**
- * Created by vicba on 27.07.2018.
+/*
+ *Counter.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class Counter {
-
+    /**
+     * Вычисляет сумму четных чисел в диапазоне
+     * @param start Начало отсчета
+     * @param finish Конец отсчета
+     * @return Возвращает сумму четных чисел.
+     */
     public int add(int start, int finish) {
         int sum = 0;
         for (int i = start; i <= finish; i++) {

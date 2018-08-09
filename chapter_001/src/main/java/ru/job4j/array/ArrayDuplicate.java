@@ -2,10 +2,19 @@ package ru.job4j.array;
 
 import java.util.Arrays;
 
-/**
- * Created by vicba on 01.08.2018.
+/*
+ *ArrayDuplicate.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class ArrayDuplicate {
+    /**
+     * Удаляет дублирующие элементы из массива.
+     * @param array Входной массив.
+     * @return Возвращает массив с удаленными дубликатами.
+     */
     public String[] remove(String[] array) {
         int index = array.length;
         for (int i = 0; i < index; i++) {

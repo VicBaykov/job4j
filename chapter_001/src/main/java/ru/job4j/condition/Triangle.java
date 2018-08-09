@@ -1,7 +1,11 @@
 package ru.job4j.condition;
 
-/**
- * Created by vicba on 25.07.2018.
+/*
+ *Triangle.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class Triangle {
     private Point a;

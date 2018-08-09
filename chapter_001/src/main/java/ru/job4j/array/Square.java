@@ -1,9 +1,18 @@
 package ru.job4j.array;
 
-/**
- * Created by vicba on 29.07.2018.
+/*
+ *Square.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class Square {
+    /**
+     * Заполняет массив квадратами чисел.
+     * @param bound Верхняя граница диапазона
+     * @return массив заполненый квадратами числе от 1 до bound
+     */
     public int[] calculate(int bound) {
         int[] rst = new int[bound];
         for (int i = 0; i < bound; i++) {

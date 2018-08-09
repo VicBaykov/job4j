@@ -1,7 +1,11 @@
 package ru.job4j.array;
 
-/**
- * Created by vicba on 30.07.2018.
+/*
+ *ArrayChar.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class ArrayChar {
     private char[] data;

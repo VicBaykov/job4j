@@ -1,9 +1,18 @@
 package ru.job4j.array;
 
-/**
- * Created by vicba on 31.07.2018.
+/*
+ *BubbleSort.
+ *
+ *@author Victor Baykov (vic.baykov89@gmail.com)
+ *@version $Id$
+ *@since 0.1
  */
 public class BubbleSort {
+    /**
+     * Сортирует элементы массива в порядке возрастания.
+     * @param array Массив, который нужно отсортировать.
+     * @return Возвращает отсортированный массив.
+     */
     public int[] sort(int[] array) {
         int buff;
         for (int i = array.length - 1; i > 0; i--) {
