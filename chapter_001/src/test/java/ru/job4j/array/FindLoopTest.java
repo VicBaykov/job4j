@@ -20,7 +20,7 @@ public class FindLoopTest {
     public void whenArrayHasLengh5ThenNone() {
         int value = 6;
         int result = find.indexOf(input, value);
-        int expect = 0;
+        int expect = -1;
         assertThat(result, is(expect));
     }
 

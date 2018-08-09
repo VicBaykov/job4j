@@ -43,7 +43,7 @@ public class ConverterTest {
     @Test
     public void when1EuroToRoubleThen70() {
         Converter converter = new Converter();
-        int result = converter.dollarToRuble(1);
+        int result = converter.euroToRuble(1);
         assertThat(result, is(70));
     }
 
