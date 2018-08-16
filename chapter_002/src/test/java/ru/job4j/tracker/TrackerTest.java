@@ -1,4 +1,4 @@
-package job4j.tracker;
+package ru.job4j.tracker;
 
 import org.junit.Test;
 import ru.job4j.tracker.Item;
@@ -13,7 +13,7 @@ public class TrackerTest {
     @Test
     public void whenReplaceItemThenReplace() {
         Tracker tracker = new Tracker();
-        Item item = new Item("test1","testName1","testDescription1");
+        Item item = new Item("test1", "testName1", "testDescription1");
         tracker.add(item);
         Item itm = new Item("test2", "testName2", "testDescription2");
         tracker.replace(item.getId(), itm);
@@ -23,7 +23,7 @@ public class TrackerTest {
     @Test
     public void whenDeleteItemThenDelete() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1","testName1","testDescription1");
+        Item item1 = new Item("test1", "testName1", "testDescription1");
         tracker.add(item1);
         Item item2 = new Item("test2", "testName2", "testDescription2");
         tracker.add(item2);
@@ -38,7 +38,7 @@ public class TrackerTest {
     @Test
     public void whenFindByNameItemThenTrackerFindByName() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1","testName1","testDescription1");
+        Item item1 = new Item("test1", "testName1", "testDescription1");
         tracker.add(item1);
         Item item2 = new Item("test2", "testName2", "testDescription2");
         tracker.add(item2);

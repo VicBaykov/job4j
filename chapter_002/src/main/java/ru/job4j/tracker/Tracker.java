@@ -28,7 +28,7 @@ public class Tracker {
         }
     }
 
-    public void delete (String id) {
+    public void delete(String id) {
         for (int i = 0; i < this.pos; i++) {
             if ((this.findById(id) != null) && (id.equals(this.items[i].getId()))) {
                 Item[] tmp = new Item[this.pos - 1];
@@ -46,7 +46,7 @@ public class Tracker {
 
     public Item findByName(String key) {
         for (Item item : items) {
-            if((item != null) && item.getName().equals(key)) {
+            if ((item != null) && item.getName().equals(key)) {
                 return item;
             }
         }
@@ -55,7 +55,7 @@ public class Tracker {
 
     public Item findById(String id) {
         for (Item item : items) {
-            if((item != null) && item.getId().equals(id)) {
+            if ((item != null) && item.getId().equals(id)) {
                 return item;
             }
         }
@@ -63,6 +63,6 @@ public class Tracker {
     }
 
     private String generateId() {
-        return String.valueOf(System.currentTimeMillis()*RND.nextInt());
+        return String.valueOf(System.currentTimeMillis() * RND.nextInt());
     }
 }

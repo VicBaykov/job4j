@@ -23,5 +23,7 @@ public class Student {
         this.age = age;
     }
 
-    public void sleepOnStudies() {}
+    public void sleepOnStudies() {
+
+    }
 }
