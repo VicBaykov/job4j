@@ -11,8 +11,7 @@ public class Item {
     private long created;
     private String[] comments;
 
-    public Item(String id, String name, String description) {
-        this.id = id;
+    public Item(String name, String description) {
         this.name = name;
         this.description = description;
     }

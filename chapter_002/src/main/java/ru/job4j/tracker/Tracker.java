@@ -20,7 +20,7 @@ public class Tracker {
 
     public void replace(String id, Item item) {
         for (int i = 0; i < this.pos; i++) {
-            if ((this.findById(id) != null) && (id.equals(items[i].getId()))) {
+            if ((this.findById(id) != null) && (this.items[i].getId().equals(id))) {
                 item.setId(id);
                 this.items[i] = item;
                 break;
@@ -30,7 +30,7 @@ public class Tracker {
 
     public void delete(String id) {
         for (int i = 0; i < this.pos; i++) {
-            if ((this.findById(id) != null) && (id.equals(this.items[i].getId()))) {
+            if ((this.findById(id) != null) && (this.items[i].getId().equals(id))) {
                 Item[] tmp = new Item[this.pos - 1];
                 System.arraycopy(this.items, 0, tmp, 0, i);
                 System.arraycopy(this.items, i + 1, tmp, i, this.pos - i - 1);
@@ -55,7 +55,7 @@ public class Tracker {
 
     public Item findById(String id) {
         for (Item item : items) {
-            if ((item != null) && item.getId().equals(id)) {
+            if ((item != null) && (item.getId().equals(id))) {
                 return item;
             }
         }
