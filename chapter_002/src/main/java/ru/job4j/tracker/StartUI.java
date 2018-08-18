@@ -6,13 +6,13 @@ package ru.job4j.tracker;
 public class StartUI {
     private ConsoleInput input = new ConsoleInput();
     private Tracker tracker = new Tracker();
-    private final String commandAdd = "0";
-    private final String commandShowAll = "1";
-    private final String commandEdit = "2";
-    private final String commandDelete = "3";
-    private final String commandFindById = "4";
-    private final String commandFindByName = "5";
-    private final String commandExit = "6";
+    private static final String COMMAND_ADD = "0";
+    private static final String COMMAND_SHOW_ALL = "1";
+    private static final String COMMAND_EDIT = "2";
+    private static final String COMMAND_DELETE = "3";
+    private static final String COMMAND_FIND_BY_ID = "4";
+    private static final String COMMAND_FIND_BY_NAME = "5";
+    private static final String COMMAND_EXIT = "6";
 
     public StartUI(ConsoleInput input, Tracker tracker) {
         this.input = input;
@@ -24,24 +24,24 @@ public class StartUI {
         while (!exit) {
             this.showMenu();
             String answer = this.input.ask("Введите пункт меню : ");
-            if (commandAdd.equals(answer)) {
+            if (COMMAND_ADD.equals(answer)) {
                 this.createItem();
-            } else if (commandShowAll.equals(answer)) {
+            } else if (COMMAND_SHOW_ALL.equals(answer)) {
                 this.showAllItems();
 
-            } else if (commandEdit.equals(answer)) {
+            } else if (COMMAND_EDIT.equals(answer)) {
                 this.replaceItem();
 
-            } else if (commandDelete.equals(answer)) {
+            } else if (COMMAND_DELETE.equals(answer)) {
                 this.deleteItem();
 
-            } else if (commandFindById.equals(answer)) {
+            } else if (COMMAND_FIND_BY_ID.equals(answer)) {
                 this.findItemById();
 
-            } else if (commandFindByName.equals(answer)) {
+            } else if (COMMAND_FIND_BY_NAME.equals(answer)) {
                 this.findItemByName();
 
-            } else if (commandExit.equals(answer)) {
+            } else if (COMMAND_EXIT.equals(answer)) {
                 exit = true;
             }
         }
