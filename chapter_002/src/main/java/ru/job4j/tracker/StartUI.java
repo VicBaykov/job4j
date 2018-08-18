@@ -86,8 +86,7 @@ public class StartUI {
         Item item = new Item(name, desc);
         if (this.tracker.replace(id, item)) {
             System.out.println("------------ Заявка с Id : " + item.getId() + " изменена-----------");
-        }
-        else {
+        } else {
             System.out.println("Item not found");
         }
     }
@@ -100,8 +99,7 @@ public class StartUI {
         String id = this.input.ask("Введите id заявки :");
         if (this.tracker.delete(id)) {
             System.out.println("------------ Заявка с Id : " + id + " удалена-----------");
-        }
-        else {
+        } else {
             System.out.println("Item not found");
         }
     }
@@ -115,8 +113,7 @@ public class StartUI {
         System.out.println("----------------- Результат ------------------");
         if (this.tracker.findById(id) != null) {
             System.out.println(this.tracker.findById(id).toString());
-        }
-        else {
+        } else {
             System.out.println("Item not found");
         }
         System.out.println("----------------------------------------------");
