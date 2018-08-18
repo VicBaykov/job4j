@@ -44,7 +44,7 @@ public class TrackerTest {
         tracker.add(item2);
         Item item3 = new Item("testName3", "testDescription3");
         tracker.add(item3);
-
-        assertThat(tracker.findByName("testName2"), is(item2));
+        Item[] expect = {item2};
+        assertThat(tracker.findByName("testName2"), is(expect));
     }
 }
