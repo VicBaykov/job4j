@@ -19,6 +19,9 @@ public class StartUI {
         this.tracker = tracker;
     }
 
+    /**
+     * Инициализирует меню взаимодействия
+     */
     public void init() {
         boolean exit = false;
         while (!exit) {
@@ -47,6 +50,9 @@ public class StartUI {
         }
     }
 
+    /**
+     * Создает заявку
+     */
     private void createItem() {
         System.out.println("------------ Добавление новой заявки --------------");
         String name = this.input.ask("Введите имя заявки :");
@@ -56,6 +62,9 @@ public class StartUI {
         System.out.println("------------ Новая заявка с getId : " + item.getId() + " добавлена!-----------");
     }
 
+    /**
+     * Выводит их на экран все элементы.
+     */
     private void showAllItems() {
         Item[] items = this.tracker.findAll();
         System.out.println("------------ Отобразить все заявки --------------");
@@ -68,6 +77,9 @@ public class StartUI {
 
     }
 
+    /**
+     * Редактирование элемента с выбранным ID
+     */
     private void replaceItem() {
         System.out.println("------------ Замена заявки --------------");
         String id = this.input.ask("Введите id заявки :");
@@ -78,6 +90,9 @@ public class StartUI {
         System.out.println("------------ Заявка с Id : " + item.getId() + " изменена-----------");
     }
 
+    /**
+     * Удаление элемента с выбранным ID
+     */
     private void deleteItem() {
         System.out.println("------------ Удаление заявки --------------");
         String id = this.input.ask("Введите id заявки :");
@@ -85,6 +100,9 @@ public class StartUI {
         System.out.println("------------ Заявка с Id : " + id + " удалена-----------");
     }
 
+    /**
+     * Вывод на экран элемента с выбранным ID
+     */
     private void findItemById() {
         System.out.println("------------ Поиск заявки по ID --------------");
         String id = this.input.ask("Введите id заявки :");
@@ -94,6 +112,9 @@ public class StartUI {
         System.out.println("-------------------------------------------------------");
     }
 
+    /**
+     * Вывод на экран всех элементов с выбранным именем
+     */
     private void findItemByName() {
         System.out.println("------------ Поиск заявки по имени --------------");
         String name = this.input.ask("Введите имя заявки :");
@@ -105,6 +126,9 @@ public class StartUI {
         }
     }
 
+    /**
+     * Отображение меню взаимодействия.
+     */
     private void showMenu() {
         System.out.println("Меню.");
         System.out.println("0. Добавление новой заявки");
