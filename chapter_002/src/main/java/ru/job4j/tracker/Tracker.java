@@ -74,14 +74,15 @@ public class Tracker {
      * @return Возвращает массив всех элементов с именем key
      */
     public Item[] findByName(String key) {
-        Item[] itemByName = new Item[items.length];
-        int i = 0;
-        for (Item item : items) {
-            if ((item != null) && item.getName().equals(key)) {
-                itemByName[i++] = item;
+        Item[] itemByName = new Item[this.pos];
+        int countSameName = 0;
+        for (int i = 0; i < this.pos; i++) {
+            if (this.items[i].getName().equals(key)) {
+                System.arraycopy(this.items, i, itemByName, countSameName, 1);
+                countSameName++;
             }
         }
-        return itemByName;
+        return Arrays.copyOf(itemByName, countSameName);
     }
 
     /**

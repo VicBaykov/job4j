@@ -6,13 +6,13 @@ package ru.job4j.tracker;
 public class StartUI {
     private ConsoleInput input = new ConsoleInput();
     private Tracker tracker = new Tracker();
-    private final String ADD = "0";
-    private final String SHOW_ALL = "1";
-    private final String EDIT = "2";
-    private final String DELETE = "3";
-    private final String FIND_ITEM_BY_ID = "4";
-    private final String FIND_ITEM_BY_NAME = "5";
-    private final String EXIT = "6";
+    private final String commandAdd = "0";
+    private final String commandShowAll = "1";
+    private final String commandEdit = "2";
+    private final String commandDelete = "3";
+    private final String commandFindById = "4";
+    private final String commandFindByName = "5";
+    private final String commandExit = "6";
 
     public StartUI(ConsoleInput input, Tracker tracker) {
         this.input = input;
@@ -24,24 +24,24 @@ public class StartUI {
         while (!exit) {
             this.showMenu();
             String answer = this.input.ask("Введите пункт меню : ");
-            if (ADD.equals(answer)) {
+            if (commandAdd.equals(answer)) {
                 this.createItem();
-            } else if (SHOW_ALL.equals(answer)) {
+            } else if (commandShowAll.equals(answer)) {
                 this.showAllItems();
 
-            } else if (EDIT.equals(answer)) {
+            } else if (commandEdit.equals(answer)) {
                 this.replaceItem();
 
-            } else if (DELETE.equals(answer)) {
+            } else if (commandDelete.equals(answer)) {
                 this.deleteItem();
 
-            } else if (FIND_ITEM_BY_ID.equals(answer)) {
+            } else if (commandFindById.equals(answer)) {
                 this.findItemById();
 
-            } else if (FIND_ITEM_BY_NAME.equals(answer)) {
+            } else if (commandFindByName.equals(answer)) {
                 this.findItemByName();
 
-            } else if (EXIT.equals(answer)) {
+            } else if (commandExit.equals(answer)) {
                 exit = true;
             }
         }
@@ -97,11 +97,12 @@ public class StartUI {
     private void findItemByName() {
         System.out.println("------------ Поиск заявки по имени --------------");
         String name = this.input.ask("Введите имя заявки :");
-        System.out.println("ID заявки:  |" + this.tracker.findByName(name).getId());
-        System.out.println("Имя заявки: |" + this.tracker.findByName(name).getName());
-        System.out.println("Описание:   |" + this.tracker.findByName(name).getDescription());
-        System.out.println("-------------------------------------------------------");
-
+        for (Item item : this.tracker.findByName(name)) {
+            System.out.println("ID заявки:  |" + item.getId());
+            System.out.println("Имя заявки: |" + item.getName());
+            System.out.println("Описание:   |" + item.getDescription());
+            System.out.println("-------------------------------------------------------");
+        }
     }
 
     private void showMenu() {
