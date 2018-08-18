@@ -95,6 +95,7 @@ public class Tracker {
         for (Item item : items) {
             if ((item != null) && (item.getId().equals(id))) {
                 itemTmp = item;
+                break;
             }
         }
         return itemTmp;
