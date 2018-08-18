@@ -56,4 +56,11 @@ public class Item {
     public void setComments(String[] comments) {
         this.comments = comments;
     }
+
+    @Override
+    public String toString() {
+        return "ID заявки:   |" + this.id + '\n' + '\r' +
+                "Имя заявки:  |" + this.name + '\n' + '\r' +
+                "Описание:    |" + this.description;
+    }
 }
