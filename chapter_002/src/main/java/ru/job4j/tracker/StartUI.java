@@ -4,8 +4,9 @@ package ru.job4j.tracker;
  * Created by vicba on 17.08.2018.
  */
 public class StartUI {
-    private ConsoleInput input = new ConsoleInput();
-    private Tracker tracker = new Tracker();
+    private final Input input;
+    private final Tracker tracker;
+
     private static final String COMMAND_ADD = "0";
     private static final String COMMAND_SHOW_ALL = "1";
     private static final String COMMAND_EDIT = "2";
@@ -14,7 +15,7 @@ public class StartUI {
     private static final String COMMAND_FIND_BY_NAME = "5";
     private static final String COMMAND_EXIT = "6";
 
-    public StartUI(ConsoleInput input, Tracker tracker) {
+    public StartUI(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }
