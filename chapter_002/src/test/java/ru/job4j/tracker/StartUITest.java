@@ -11,7 +11,6 @@ import ru.job4j.tracker.Tracker;
  * Created by vicba on 21.08.2018.
  */
 public class StartUITest {
-
     @Test
     public void whenUserAddItemThenTrackerHasNewItemWithSameName() {
         Tracker tracker = new Tracker();

@@ -11,8 +11,8 @@ import static org.junit.Assert.assertThat;
 public class TriangleTest {
     @Test
     public void whenDrawTriangle() {
-        Square square = new Square();
-        assertThat(square.draw(), is(
+        Triangle triangle = new Triangle();
+        assertThat(triangle.draw(), is(
                 new StringBuilder()
                         .append("   *   ")
                         .append("  * *  ")

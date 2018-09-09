@@ -41,7 +41,7 @@ public class PaintTest {
         );
         System.setOut(stdout);
     }
-
+    @Test
     public void whenDrawTriangle() {
         new Paint().draw(new Square());
         assertThat(
