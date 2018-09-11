@@ -43,7 +43,7 @@ public class PaintTest {
     }
     @Test
     public void whenDrawTriangle() {
-        new Paint().draw(new Square());
+        new Paint().draw(new Triangle());
         assertThat(
                 new String(out.toByteArray()),
                 is(
